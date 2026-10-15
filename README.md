@@ -20,6 +20,8 @@ Full-stack assessment project: React + Axios frontend, Java 17 + Spring Boot 3 b
 
 ## 1. Create database
 Run `database/schema.sql` in MySQL.
+schema file attached in `backend/src/main/resources/schema.sql`.
+
 
 ## 2. Configure and run the backend
 
@@ -285,10 +287,10 @@ SHOW TABLES;
 
 ```text
 employee-management/
-├── schema.sql
 ├── README.md
 └── backend/
     └── src/
         └── main/
             └── resources/
                 └── application.properties
+                ├── schema.sql
