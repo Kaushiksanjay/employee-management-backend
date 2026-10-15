@@ -18,15 +18,19 @@ Full-stack assessment project: React + Axios frontend, Java 17 + Spring Boot 3 b
 - Node.js 18+
 - MySQL 8+
 
+## Architecture file and Postman Evidence
+both file are inside `employee-management-backend/Employee Management System Architecture (1)` and `employee-management-backend/Postman Evidence`
+
 ## 1. Create database
 Run `database/schema.sql` in MySQL.
-schema file attached in `backend/src/main/resources/schema.sql`.
+schema file attached in `employee-management-backend/src/main/resources/schema.sql`.
+configuration of schema.sql in MySQL is given below
 
 
 ## 2. Configure and run the backend
 
 The backend reads its settings from environment variables, with defaults in
-`backend/src/main/resources/application.properties`.
+`employee-management-backend/src/main/resources/application.properties`.
 
 ### Backend environment variables
 
@@ -42,10 +46,10 @@ The backend reads its settings from environment variables, with defaults in
 
 ### Backend `.env` file
 
-Create `backend/.env` (next to `pom.xml`) from the template:
+Create `employee-management-backend/.env` (next to `pom.xml`) from the template:
 
 ```bash
-cd backend
+cd employee-management-backend
 cp .env.example .env
 ```
 
@@ -69,7 +73,7 @@ CORS_ALLOWED_ORIGINS=http://localhost:5173
 
 ### Run the backend
 
-From `backend/`:
+From `employee-management-backend/`:
 ```bash
 mvn spring-boot:run
 ```
@@ -86,10 +90,10 @@ Backend URL: `http://localhost:8080`
 
 ### Frontend `.env` file
 
-Create `frontend/.env` (next to `package.json`) from the template:
+Create `employee-management-frontend/.env` (next to `package.json`) from the template:
 
 ```bash
-cd frontend
+cd employee-management-fronted
 cp .env.example .env
 ```
 
@@ -105,7 +109,7 @@ VITE_PROXY_TARGET=http://localhost:8080
 
 ### Run the frontend
 
-From `frontend/`:
+From `employee-management-frontend/`:
 ```bash
 npm install
 npm run dev
@@ -286,11 +290,10 @@ SHOW TABLES;
 ## 5. Example Project Structure
 
 ```text
-employee-management/
-├── README.md
-└── backend/
+employee-management-backend/
+    ├── README.md
     └── src/
         └── main/
             └── resources/
-                └── application.properties
-                ├── schema.sql
+                ├── application.properties
+                └── schema.sql
